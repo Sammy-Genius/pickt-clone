@@ -1,0 +1,143 @@
+
+
+.menu {
+    position:fixed;
+    width:100%;
+    height:90%;
+    top:10%;
+    left:0;
+    z-index:50;
+    background-color:rgba(0,0,0,0.8);
+    display: flex;
+}
+
+.menu-container {
+    width:20%;
+    height:100%;
+    position: relative;
+}
+
+.menu-content {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:60%;
+    height:90%;
+    display:flex;
+    flex-direction: column;
+}
+
+.menu-content .menu-links-box {
+    width:100%;
+    height:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-links-box a {
+    font-size: 3rem;
+    color:var(--purple);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.menu-content .sm-container {
+    width:50%;
+    height:50%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btns-container {
+    display:flex;
+    justify-content: space-between;
+}
+
+.btns-container button {
+    border:0;
+    background: none;
+    outline: none;
+    padding:20px 60px;
+    border-radius:10px;
+    font-weight:700;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btns-container button:nth-child(1) {
+    border: 2px solid var(--purple);
+    color:var(--purple);
+}
+
+
+.btns-container button:nth-child(2) {
+    background-color:var(--purple);
+    color:white;
+}
+
+.sm-container .social-media {
+    width:100%;
+    height:20%;
+    justify-content: space-around; /* overrides justify-content in flex class */
+}
+
+.social-media a {
+    color:var(--purple);
+    font-weight: 500;
+    font-size:1.05rem;
+    transform: translateY(0);
+}
+
+
+
+.menu-container .menu-blocks:nth-child(1),
+.menu-container .menu-blocks:nth-child(2) {
+    position:absolute;
+    width:100%;
+    height:100%;
+    bottom:0;
+    transform: translateY(1000px);
+}
+
+.menu-container .menu-blocks:nth-child(1) {
+    background-color: var(--purple);
+}
+
+.menu-container .menu-blocks:nth-child(2) {
+    background-color: var(--bgColor);
+    position:relative;
+}
+
+/*--------for smaller screens----------*/
+@media screen and (max-width:900px) {
+    .menu-content {
+        width:95%;
+    }
+    
+    .menu-content .menu-links-box {
+        align-items: flex-start;
+        height:30%;
+    }
+
+    .menu-content .menu-links-box a {
+        font-size: 2rem;
+    }
+
+    .menu-content .sm-container {
+        width:100%;
+    }
+
+    .sm-container .social-media {
+        height:70%;
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+}
